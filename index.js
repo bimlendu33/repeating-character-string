@@ -2,7 +2,7 @@ var str = 'adsjfdsfsfjsdjfhacabcsbajda';
 var index = 0;
 var count = {};
 
-function test() {
+function repeatingCharacter() {
   if (index < str.length) {
     if (count[str.charAt(index)] === undefined) {
       count[str.charAt(index)] = 1;
@@ -10,10 +10,10 @@ function test() {
       count[str.charAt(index)] = count[str.charAt(index)] + 1;
     }
     index = index + 1;
-    test();
+    repeatingCharacter();
   }
   return count;
 }
 
-let p = test();
+let p = repeatingCharacter();
 console.log(p);
